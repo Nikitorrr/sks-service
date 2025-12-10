@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Официальный сайт ООО «СКС Сервис» — онлайн запись на техническое обслуживание">
+  <title>СКС Сервис — Онлайн запись</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Шапка -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">СКС Сервис</div>
+      <nav class="nav">
+        <a href="#about">О компании</a>
+        <a href="#services">Услуги</a>
+        <a href="#booking" class="btn-primary">Онлайн запись</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Герой -->
+  <section class="hero">
+    <div class="container">
+      <h1>Надёжное техническое обслуживание — онлайн</h1>
+      <p>Оставьте заявку за 30 секунд. Мы перезвоним и согласуем выезд мастера.</p>
+      <a href="#booking" class="btn-primary">Записаться сейчас</a>
+    </div>
+  </section>
+
+  <!-- О компании -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2>О компании</h2>
+      <p>ООО «СКС Сервис» — профессиональное обслуживание оборудования в Минске и области. Работаем с 2015 года.</p>
+    </div>
+  </section>
+
+  <!-- Услуги -->
+  <section id="services" class="section">
+    <div class="container">
+      <h2>Наши услуги</h2>
+      <ul class="services-list">
+        <li>Техническое обслуживание систем кондиционирования</li>
+        <li>Ремонт насосного оборудования</li>
+        <li>Диагностика и настройка СКС</li>
+        <li>Аварийный выезд</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Онлайн запись (веб-приложение) -->
+  <section id="booking" class="section bg-light">
+    <div class="container">
+      <h2>Онлайн запись</h2>
+      <form id="bookingForm" class="form">
+        <input type="text" name="name" placeholder="Ваше имя *" required>
+        <input type="tel" name="phone" placeholder="Телефон *" required>
+        <select name="equipment" required>
+          <option value="">Тип оборудования *</option>
+          <option value="Кондиционер">Кондиционер</option>
+          <option value="Насос">Насос</option>
+          <option value="СКС">СКС (структурированная кабельная система)</option>
+          <option value="Другое">Другое</option>
+        </select>
+        <textarea name="description" placeholder="Опишите неисправность"></textarea>
+        <button type="submit" class="btn-primary">Отправить заявку</button>
+      </form>
+      <div id="formResult"></div>
+    </div>
+  </section>
+
+  <!-- Футер -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 ООО «СКС Сервис»</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
