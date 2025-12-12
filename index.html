@@ -5,18 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="Официальный сайт ООО «СКС Сервис» — онлайн запись на техническое обслуживание">
   <title>СКС Сервис — Онлайн запись</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <!-- Шапка -->
   <header class="header">
     <div class="container">
-      <div class="logo">СКС Сервис</div>
-      <nav class="nav">
-        <a href="#about">О компании</a>
-        <a href="#services">Услуги</a>
-        <a href="#booking" class="btn-primary">Онлайн запись</a>
+      <!-- Логотип как текст с эффектом пламени -->
+      <div class="logo-flame">СКС-СЕРВИС</div>
+      <!-- Навигация как кнопки -->
+      <nav class="nav-buttons">
+        <a href="#about" class="nav-btn">О компании</a>
+        <a href="#services" class="nav-btn">Услуги</a>
+        <a href="#portfolio" class="nav-btn">Портфолио</a>
+        <a href="#contact" class="nav-btn">Контакты</a>
       </nav>
     </div>
   </header>
@@ -24,53 +27,106 @@
   <!-- Герой -->
   <section class="hero">
     <div class="container">
-      <h1>Надёжное техническое обслуживание — онлайн</h1>
-      <p>Оставьте заявку за 30 секунд. Мы перезвоним и согласуем выезд мастера.</p>
-      <a href="#booking" class="btn-primary">Записаться сейчас</a>
+      <h1>Надёжные решения для вашей IT-инфраструктуры</h1>
+      <p>Установка, обслуживание и ремонт сетевого оборудования, систем безопасности и Wi-Fi</p>
     </div>
   </section>
 
   <!-- О компании -->
-  <section id="about" class="section">
+  <section id="about" class="section card">
     <div class="container">
-      <h2>О компании</h2>
-      <p>ООО «СКС Сервис» — профессиональное обслуживание оборудования в Минске и области. Работаем с 2015 года.</p>
+      <h2>Ваш надёжный партнёр в IT</h2>
+      <p>С более чем 5 лет опыта, мы специализируемся на установке и обслуживании сетевой инфраструктуры. От прокладки кабелей до установки камер видеонаблюдения — мы обеспечиваем стабильную работу ваших систем.</p>
+      <div class="features">
+        <div class="feature-card">
+          <div class="feature-icon">🛡️</div>
+          <div>
+            <h3>Сертифицированные техники</h3>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔌</div>
+          <div>
+            <h3>Качественные материалы</h3>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📞</div>
+          <div>
+            <h3>Поддержка 24/7</h3>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Услуги -->
-  <section id="services" class="section">
+  <section id="services" class="section card">
     <div class="container">
       <h2>Наши услуги</h2>
-      <ul class="services-list">
-        <li>Техническое обслуживание систем кондиционирования</li>
-        <li>Ремонт насосного оборудования</li>
-        <li>Диагностика и настройка СКС</li>
-        <li>Аварийный выезд</li>
-      </ul>
+      <div class="services-grid">
+        <div class="service-item">Установка серверных стоек</div>
+        <div class="service-item">Кабельная система</div>
+        <div class="service-item">Коммутаторы</div>
+        <div class="service-item">Контроль доступа</div>
+        <div class="service-item">Видеонаблюдение</div>
+        <div class="service-item">Wi-Fi установка</div>
+      </div>
     </div>
   </section>
 
-  <!-- Онлайн запись (веб-приложение) -->
-  <section id="booking" class="section bg-light">
+  <!-- Портфолио -->
+  <section id="portfolio" class="section card">
     <div class="container">
-      <h2>Онлайн запись</h2>
-      <form id="bookingForm" class="form">
-        <input type="text" name="name" placeholder="Ваше имя *" required>
-        <input type="tel" name="phone" placeholder="Телефон *" required>
-        <select name="equipment" required>
-          <option value="">Тип оборудования *</option>
-          <option value="Кондиционер">Кондиционер</option>
-          <option value="Насос">Насос</option>
-          <option value="СКС">СКС (структурированная кабельная система)</option>
-          <option value="Другое">Другое</option>
-        </select>
-        <textarea name="description" placeholder="Опишите неисправность"></textarea>
-        <button type="submit" class="btn-primary">Отправить заявку</button>
-      </form>
-      <div id="formResult"></div>
+      <h2>Портфолио</h2>
+      <!-- Только заголовок — без изображений -->
     </div>
   </section>
+
+  <!-- Контакты / Онлайн запись -->
+  <section id="contact" class="section card">
+    <div class="container">
+      <h2>Свяжитесь с нами</h2>
+      <form id="bookingForm" class="form-container">
+        <div class="form-group">
+          <label for="name">Имя *</label>
+          <input type="text" id="name" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Телефон (только РФ) *</label>
+          <input type="tel" id="phone" placeholder="+7 900 123-45-67" required>
+        </div>
+        <div class="form-group">
+          <label for="service">Услуга *</label>
+          <select id="service" required>
+            <option value="">— Выберите —</option>
+            <option value="videonablyudenie">Установка видеонаблюдения</option>
+            <option value="servernye_stoyki">Установка серверных стоек</option>
+            <option value="kabelnaya_sistema">Структурированная кабельная система</option>
+            <option value="kontrol_dostupa">Системы контроля доступа</option>
+            <option value="wifi">Установка Wi-Fi</option>
+            <option value="remont">Ремонт оборудования</option>
+          </select>
+        </div>
+
+        <!-- Динамические поля появятся здесь -->
+        <div id="serviceFields"></div>
+
+        <div class="form-group">
+          <label for="address">Адрес объекта *</label>
+          <input type="text" id="address" required>
+        </div>
+
+        <button type="submit" class="btn-submit">Отправить заявку</button>
+      </form>
+      <div id="successMessage" class="success-message">✅ Заявка отправлена! Мы перезвоним в течение 15 минут.</div>
+    </div>
+  </section>
+
+  <!-- Крупная кнопка "Записаться на обслуживание" -->
+  <div class="center-button">
+    <a href="#contact" class="btn-large">Записаться на обслуживание</a>
+  </div>
 
   <!-- Футер -->
   <footer class="footer">
